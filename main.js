@@ -31,7 +31,7 @@ function createUrlList() {
   if (inputLink.checked && url.value != "") {
     sectionPost.innerHTML += `
     <div >
-      <a href="${url.value}">${url.value}</a>
+      <a href="${url.value}" target="_blank">${url.value}</a>
       <i class="fas fa-times button__close" ></i>
     </div>`;
   }
