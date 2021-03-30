@@ -10,5 +10,5 @@
 
 <div align="center">
 :earth_americas: 
-<a href="https://coelho-na.github.io/saveUrl/"> See more</a>
+<a href="https://coelho-na.github.io/saveUrl/" target="_blank"> See more</a>
 </div>
