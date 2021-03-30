@@ -13,14 +13,14 @@ btn.addEventListener("click", createUrlList);
 // function to fire when btn is clicked
 
 function createUrlList() {
-  if (inputImage.checked) {
+  if (inputImage.checked && url.value != "") {
     sectionPost.innerHTML += `
     <div >
       <img src="${url.value}" />
       <i class="fas fa-times button__close"></i>
     </div>`;
   }
-  if (inputVideo.checked) {
+  if (inputVideo.checked && url.value != "") {
     sectionPost.innerHTML += `
     <div>
       <iframe width="100%" height="480" src="${url.value}">
@@ -28,15 +28,26 @@ function createUrlList() {
      <i class="fas fa-times button__close"></i> 
     </div>`;
   }
-  if (inputLink.checked) {
+  if (inputLink.checked && url.value != "") {
     sectionPost.innerHTML += `
     <div >
       <a href="${url.value}">${url.value}</a>
       <i class="fas fa-times button__close" ></i>
     </div>`;
+  }
+
+  if (url.value == "") {
+    alert("You need provide a valid url");
+  }
+
+  if (!inputLink.checked && !inputImage.checked && !inputVideo.checked) {
+    alert("Please, select a type of Url!");
   } else {
     sectionPost.innerHTML += "";
+    url.value = "";
   }
+
+  // reseting radio box  after click on add
   let removeChecked = document.getElementsByName("typeurl");
   for (var i = 0; i < removeChecked.length; i++) {
     removeChecked[i].checked = false;
