@@ -1,4 +1,4 @@
-urls {
+.urls {
   border-radius: 2px;
   padding: 0 10px;
   &__post {
@@ -23,7 +23,7 @@ urls {
       display: block;
       box-shadow: 10px 5px 10px rgba(17, 16, 16, 0.5);
       width: 100%;
-      margin: 10px auto;
+      margin: 15px auto;
       text-align: center;
       position: relative;
       background-color: #a68dc7;
@@ -32,7 +32,8 @@ urls {
     }
 
     & > div a {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
+      padding: 10px;
       color: $clr-white;
       text-decoration: none;
     }
