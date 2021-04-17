@@ -17,12 +17,13 @@
     <link rel="stylesheet" href="./dist/css/style.min.css" />
   </head>
   <body>
-    <section>
+    <section class="form">
       <div class="container">
         <h2 class="container__title">Save your url</h2>
 
-        <form class="form" action="">
+        <form>
           <input
+            class="form__inputText"
             type="text"
             name="textUrl"
             id="textUrl"
@@ -32,13 +33,19 @@
           <div class="form__radioBox">
             <label class="label__radio" for="video"
               >Video
-              <input type="radio" name="typeurl" value="video" id="video" />
+              <input
+                class="form__inputRadio"
+                type="radio"
+                name="typeurl"
+                value="video"
+                id="video"
+              />
             </label>
 
             <label class="label__radio" for="image"
               >Image
               <input
-                class="teste"
+                class="form__inputRadio"
                 type="radio"
                 name="typeurl"
                 id="image"
@@ -49,7 +56,7 @@
             <label class="label__radio" for="link"
               >Link
               <input
-                class="teste"
+                class="form__inputRadio"
                 type="radio"
                 name="typeurl"
                 id="link"
@@ -65,7 +72,21 @@
 
     <section class="urls">
       <h3 class="urls__subtitle">List of URLs:</h3>
-      <div class="urls__post"></div>
+      <div class="urls__post">
+        <div id="imageDiv" class="urls__content">
+          <img class="urls__content--img" />
+          <a class="button__close"><i class="fas fa-times urls__icon"></i></a>
+        </div>
+        <div id="linkDiv" class="urls__content">
+          <a class="urls__content--link" target="_blank"></a>
+          <a class="button__close"><i class="fas fa-times urls__icon"></i></a>
+        </div>
+        <div id="iframeDiv" class="urls__content urls__content--iframe">
+          <iframe class="urls__content--video" width="100%" height="480">
+          </iframe>
+          <a class="button__close"><i class="fas fa-times urls__icon"></i></a>
+        </div>
+      </div>
     </section>
 
     <script src="main.js"></script>
