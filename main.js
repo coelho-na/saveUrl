@@ -6,6 +6,7 @@ let sectionPost = document.querySelector(".urls__post");
 let inputImage = document.querySelector("input#image");
 let inputVideo = document.querySelector("input#video");
 let inputLink = document.querySelector("input#link");
+let form = document.querySelector("form");
 
 // Event When Click on Button
 btn.addEventListener("click", createUrlList);
