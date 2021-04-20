@@ -3,6 +3,7 @@ const sassChanges = "./sass/**/*.scss";
 const sassToCompile = "./sass/style.scss";
 const cssToMinify = "./dist/css/style.css";
 const folderDistCSS = "./dist/css/";
+const jsFile = "./main.js";
 
 ////////////////////////////
 
@@ -25,6 +26,7 @@ function watchForChanges() {
   }),
     watch(sassChanges, series(Sass, minifyCss, cssInject));
   watch(htmlPage).on("change", browserSync.reload);
+  watch(jsFile).on("change", browserSync.stream());
 }
 
 function Sass() {
